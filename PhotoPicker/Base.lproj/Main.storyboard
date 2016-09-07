@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="118"/>
+            <point key="canvasLocation" x="1049" y="1472"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="xXp-PT-PFv">
@@ -74,6 +74,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="84B-3w-BGE" kind="show" id="oEB-xG-YVJ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageSlider" id="0S6-Jb-U37">
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
@@ -82,6 +85,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mkc-T2-6gO" kind="show" id="0D7-zS-3Wz"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageDetail" id="f6Q-NB-6fy">
                                 <rect key="frame" x="0.0" y="180" width="600" height="44"/>
@@ -90,6 +96,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Vhe-G2-ble" kind="show" id="A0E-YP-rFo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -111,6 +120,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sco-7L-hI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1049" y="695"/>
+        </scene>
+        <!--Image Collection Controller-->
+        <scene sceneID="mNB-Aq-AEN">
+            <objects>
+                <collectionViewController id="84B-3w-BGE" customClass="ImageCollectionController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="stX-N5-Iok">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4cS-Gi-DUH">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="udw-zY-wue">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="84B-3w-BGE" id="OXY-a3-Atu"/>
+                            <outlet property="delegate" destination="84B-3w-BGE" id="DhH-vU-smu"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua6-21-xx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="1472"/>
+        </scene>
+        <!--Image Detail Controller-->
+        <scene sceneID="ucE-GW-W5p">
+            <objects>
+                <viewController id="Vhe-G2-ble" customClass="ImageDetailController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8O8-VW-CQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="tyq-B4-G5T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wVK-Uz-XZ6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9s-3j-Xeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-87"/>
+        </scene>
+        <!--Image Slider Controller-->
+        <scene sceneID="SFI-03-j6v">
+            <objects>
+                <viewController id="mkc-T2-6gO" customClass="ImageSliderController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nhP-cC-goD"/>
+                        <viewControllerLayoutGuide type="bottom" id="X8z-rh-LPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qNy-4O-pwj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4D-6B-Uin" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jf-xj-yZe">
